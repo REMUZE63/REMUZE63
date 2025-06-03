@@ -56,7 +56,7 @@ cat > /etc/dnsmasq.conf <<EOF
 no-resolv
 no-poll
 no-hosts
-listen-address=192.168.14.62
+listen-address=192.168.14.30
 
 server=77.88.8.8
 server=8.8.8.8
@@ -66,7 +66,7 @@ all-servers
 no-negcache
 
 host-record=hq-rtr.au-team.irpo,192.168.14.1
-host-record=hq-srv.au-team.irpo,192.168.14.62
+host-record=hq-srv.au-team.irpo,192.168.14.30
 host-record=hq-cli.au-team.irpo,192.168.14.66
 
 address=/br-rtr.au-team.irpo/192.168.13.1
