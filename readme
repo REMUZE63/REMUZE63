@@ -1,0 +1,10 @@
+Чтобы использовать данный скрипт нужно выполнить одну команду:
+
+apt-get update -y && apt-get install git -y && git clone https://github.com/REMUZE63/REMUZE63 && cd REMUZE63/ && chmod +x ISP.sh && sh ISP.sh
+apt-get update -y && apt-get install git -y && git clone https://github.com/REMUZE63/REMUZE63 && cd REMUZE63/ && chmod +x HQ-SRV.sh && sh HQ-SRV.sh
+apt-get update -y && apt-get install git -y && git clone https://github.com/REMUZE63/REMUZE63 && cd REMUZE63/ && chmod +x BR-SRV.sh && sh BR-SRV.sh
+apt-get update -y && apt-get install git -y && git clone https://github.com/REMUZE63/REMUZE63 && cd REMUZE63/ && chmod +x HQ-CLI.sh && sh HQ-CLI.sh
+
+
+
+https://dropmefiles.com/M3YpS
