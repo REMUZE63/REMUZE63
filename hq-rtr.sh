@@ -15,7 +15,7 @@ description "to hq-srv"
 ip address 192.168.14.1/27
 port te1
 service-instance te1/int1
-encapsulation dot1q 100 exact
+encapsulation dot1q 10 exact
 rewrite pop 1
 interface int1
 connect port te1 service-instance te1/int1
@@ -24,7 +24,7 @@ description "to hq-cli"
 ip address 192.168.14.65/28
 port te1
 service-instance te1/int2
-encapsulation dot1q 200 exact
+encapsulation dot1q 20 exact
 rewrite pop 1
 interface int2
 connect port te1 service-instance te1/int2
@@ -33,7 +33,7 @@ description "to management"
 ip address 192.168.14.81/29
 port te1
 service-instance te1/int3
-encapsulation dot1q 999 exact
+encapsulation dot1q 99 exact
 rewrite pop 1
 interface int3
 connect port te1 service-instance te1/int3
