@@ -99,39 +99,6 @@ ansible_python_interpreter=/usr/bin/python3
 EOF
 ansible -m ping all
 
-#Установка Docker 
-systemctl disable —now ahttpd
-apt-get install -y docker-{ce,compose}
-systemctl enable --now docker
 
-touch /home/sshuser/wiki.yaml
-cat <<EOF > /home/sshuser/wiki.yaml
-services:
-  mediawiki:
-    container_name: wiki
-    image: mediawiki
-    restart: always
-    ports:
-      - "8080:80"
-    links:
-      - db
-#    volumes:
-#      - ./LocalSettings.php:/var/www/html/LocalSettings.php
-
-  db:
-    container_name: mariadb
-    image: mariadb
-    restart: always
-    environment:
-      MARIADB_DATABASE: mediawiki
-      MARIADB_USER: wiki
-      MARIADB_PASSWORD: WikiP@ssw0rd
-      MARIADB_ROOT_PASSWORD: P@ssw0rd
-    volumes:
-      - db_data:/var/lib/mysql
-
-volumes:
-  db_data:
-EOF
 
 grep -E "Port|MaxAuthTries|PasswordAuthentication|PubkeyAuthentication" "$CONFIG_FILE"
